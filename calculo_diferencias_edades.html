@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+
+<script>
+    // Se realizara un programa para ver las edades del año en curso y la diferencia de edades.
+    var agno = 2023;
+    var edadPersona1= agno-1992;
+    var edadPersona2= agno-1993;
+    var edadPersona3= agno-1996;
+    var edadPersona4= agno-1998;
+    var edadPersona5= agno-2001;
+    
+
+    function saltarLinea(cantSalto){
+        for (var saltos = 1; saltos <= cantSalto; saltos++)
+        document.write("<br>");
+    } 
+    function imprimir(mensaje,num){
+        document.write(mensaje)
+        saltarLinea(num);  
+    }
+    function difEdad(persona1,persona2, edadP1, edadP2, num){
+        document.write("La diferencia de edad de "+persona1+ " y "+persona2+" es de: "+(edadP1-edadP2)+" años")
+        saltarLinea(num);  
+    }
+
+    imprimir("Edad actual de Angelica: " + edadPersona1+" de Edad",2);
+    imprimir("Edad actual de Javier: "+ edadPersona2+" de Edad",2);
+    imprimir("Edad actual de Araceli: "+ edadPersona3+" de Edad",2);
+    imprimir("Edad actual de Rosa Isela: "+ edadPersona4+" de Edad",2);
+    imprimir("Edad actual de Griselda: "+ edadPersona5+" de Edad",4);
+    var promedio = (edadPersona1+edadPersona2+edadPersona3+edadPersona4+edadPersona5)/5;
+    imprimir("El promedio de las edades de las personas es: "+ Math.round(promedio));
+    saltarLinea(3)
+    difEdad("Angelica", "Griselda", edadPersona1, edadPersona5, 2);
+    difEdad("Araceli", "Rosa", edadPersona3, edadPersona4, 2);
+    difEdad("Javier", "Griselda", edadPersona2, edadPersona5, 2);
+    
+
+</script>
