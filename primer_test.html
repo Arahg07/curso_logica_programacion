@@ -7,26 +7,24 @@
     var edadPersona3= agno-1996;
     var edadPersona4= agno-1998;
     var edadPersona5= agno-2001;
-    var cantSalto = 3;
 
-
-    function saltarLinea(){
+    function saltarLinea(cantSalto){
         for (var saltos = 1; saltos <= cantSalto; saltos++)
         document.write("<br>");
     } 
+    function imprimir(mensaje,num){
+        document.write(mensaje)
+        saltarLinea(num);  
+    }
 
-    document.write("Edad actual de persona 1: " + edadPersona1+" de Edad");
-    saltarLinea();
-    document.write("Edad actual de persona 2: "+ edadPersona2+" de Edad");
-    saltarLinea();
-    document.write("Edad actual de persona 3: "+ edadPersona3+" de Edad");
-    saltarLinea();
-    document.write("Edad actual de persona 4: "+ edadPersona4+" de Edad");
-    saltarLinea();
-    document.write("Edad actual de persona 5: "+ edadPersona5+" de Edad");
-    saltarLinea();
+
+    imprimir("Edad actual de persona 1: " + edadPersona1+" de Edad",2);
+    imprimir("Edad actual de persona 2: "+ edadPersona2+" de Edad",2);
+    imprimir("Edad actual de persona 3: "+ edadPersona3+" de Edad",2);
+    imprimir("Edad actual de persona 4: "+ edadPersona4+" de Edad",2);
+    imprimir("Edad actual de persona 5: "+ edadPersona5+" de Edad",4);
     var promedio = (edadPersona1+edadPersona2+edadPersona3+edadPersona4+edadPersona5)/5;
-    document.write("El promedio de las edades de las personas es: "+ Math.round(promedio));
+    imprimir("El promedio de las edades de las personas es: "+ Math.round(promedio));
     
 
 </script>
