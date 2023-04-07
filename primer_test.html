@@ -7,20 +7,26 @@
     var edadPersona3= agno-1996;
     var edadPersona4= agno-1998;
     var edadPersona5= agno-2001;
+    var cantSalto = 3;
+
+
+    function saltarLinea(){
+        for (var saltos = 1; saltos <= cantSalto; saltos++)
+        document.write("<br>");
+    } 
 
     document.write("Edad actual de persona 1: " + edadPersona1+" de Edad");
-    document.write("<br>");
+    saltarLinea();
     document.write("Edad actual de persona 2: "+ edadPersona2+" de Edad");
-    document.write("<br>");
+    saltarLinea();
     document.write("Edad actual de persona 3: "+ edadPersona3+" de Edad");
-    document.write("<br>");
+    saltarLinea();
     document.write("Edad actual de persona 4: "+ edadPersona4+" de Edad");
-    document.write("<br>");
+    saltarLinea();
     document.write("Edad actual de persona 5: "+ edadPersona5+" de Edad");
-    document.write("<br>");
-
+    saltarLinea();
     var promedio = (edadPersona1+edadPersona2+edadPersona3+edadPersona4+edadPersona5)/5;
-
     document.write("El promedio de las edades de las personas es: "+ Math.round(promedio));
     
+
 </script>
