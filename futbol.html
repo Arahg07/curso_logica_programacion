@@ -9,6 +9,7 @@
     <script>
         var victorias = parseInt(prompt("Ingresa el total de victorias "));
         var empates = parseInt(prompt ("Ingresa el total de empates "));
+        var agnoPasado = 28; 
         
                 
         function imprimir(mensaje){
@@ -24,9 +25,18 @@
                 document.write("<br>");
         }
         
-        imprimir("El total de puntos obtenido es: "+ calcularPuntos(victorias,empates));
+        var puntosTotales = calcularPuntos(victorias,empates);
+        imprimir("El total de puntos obtenido es: "+ puntosTotales);
         saltarLinea(2);
 
+        if (puntosTotales > agnoPasado)
+            imprimir("El equipo esta mejor que el año pasado");
+
+        if (puntosTotales < agnoPasado)
+            imprimir("El equipo esta peor que el año pasado");
+
+        if (puntosTotales == agnoPasado)
+            imprimir("El equipo esta igual que el año pasado");
     </script>
      
 </html>
