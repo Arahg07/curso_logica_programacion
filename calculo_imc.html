@@ -8,15 +8,15 @@
 
     <script>
         var nombre = prompt("Ingresa tu nombre: ");
-        var peso = prompt ("Ingresa tu peso: ");
-        var altura = prompt ("Ingresa tu altura: ");
+        var peso = parseFloat(prompt ("Ingresa tu peso: "));
+        var altura = parseFloat(prompt ("Ingresa tu altura: "));
                 
         function imprimir(mensaje){
             document.write(mensaje);
         }
 
-        function calcularIMC(nombre, peso, altura){
-            imc = Math.round((peso/(altura*altura)))
+        function calcularIMC(peso, altura){
+            imc = Math.round(peso/(altura*altura))
             return imc;
         }
 
@@ -25,9 +25,19 @@
                 document.write("<br>");
         }
         
-        imprimir("El IMC perteneciente a "+nombre+" es de: "+ calcularIMC(nombre,peso, altura));
-        saltarLinea(2);
+        var resultadoImc = calcularIMC(peso, altura);
+        imprimir("El IMC perteneciente a "+nombre+" es de: "+ resultadoImc);
+        saltarLinea(5);
+
+
+        if (resultadoImc < 18.5  && resultadoImc < 25)
+            imprimir("Tú IMC esta abajo de lo recomendado");
+        if (resultadoImc >= 25 && resultadoImc < 30)
+            imprimir("Tú IMC marca con sobrepeso");
+        if (resultadoImc >= 30 && resultadoImc < 40)
+            imprimir("Tú IMC marca con obesidad");
+        if (resultadoImc >= 40 )
+            imprimir("Tú IMC marca con obesidad clase III");
+
 
     </script>
-     
-</html>
