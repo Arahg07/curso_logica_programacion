@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+<html>
+    <head>
+      <title>Juego numero Azar</title>
+    </head>
+
+    <h2>¡Adivina el numero!</h2>
+
+    <script>
+        var nombre = prompt("Ingresa tu nombre: ");
+        var numeroAzar = Math.round(Math.random()*10);
+        var numeroIngresado = parseInt(prompt ("Ingresa un número: "));
+                
+        function imprimir(mensaje){
+            document.write(mensaje);
+        }
+
+        function saltarLinea(saltos){
+            for (var i = 1; i <= saltos; i++)
+                document.write("<br>");
+        }
+
+        if (numeroIngresado == numeroAzar)
+            imprimir("Felicidades "+nombre+", acerto al numero: "+numeroAzar);
+        else
+            imprimir("Perdio "+nombre+", el numero era: "+numeroAzar);
+
+
+
+    </script>
+     
+</html>
