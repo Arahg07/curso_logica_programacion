@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<html>
+    <head>
+      <title>Mundial Fifa</title>
+    </head>
+
+    <h2>Años del mundial</h2>
+
+    <script>
+        var agnoMundial = parseInt(prompt("Ingresa un año limite: "));
+        var mundial = 1930;
+
+        function imprimir(mensaje){
+            document.write(mensaje);
+            saltarLinea(1);
+        }
+
+        function saltarLinea(saltos){
+            for (var i = 1; i <= saltos; i++)
+                document.write("<br>");
+        }
+
+        while (mundial <= agnoMundial){
+            imprimir ("En el año "+mundial+" hubo mundial");
+            mundial = mundial + 4;
+        }
+
+        alert(fin);
+
+
+    </script>
+     
+</html>
