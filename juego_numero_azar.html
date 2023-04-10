@@ -8,11 +8,11 @@
 
     <script>
         var nombre = prompt("Ingresa tu nombre: ");
-        var numeroAzar = Math.round(Math.random()*10);
-        var numeroIngresado = parseInt(prompt ("Ingresa un número: "));
+        var numeroIngresado = parseInt(prompt ("Ingresa un número del 1 al 10: "));
                 
         function imprimir(mensaje){
             document.write(mensaje);
+            saltarLinea(1);
         }
 
         function saltarLinea(saltos){
@@ -20,10 +20,18 @@
                 document.write("<br>");
         }
 
+        function loteria(n){
+            return Math.round(Math.random()*n);
+        }
+
+        var numeroAzar = loteria(10);
+
         if (numeroIngresado == numeroAzar)
             imprimir("Felicidades "+nombre+", acerto al numero: "+numeroAzar);
-        else
-            imprimir("Perdio "+nombre+", el numero era: "+numeroAzar);
+        else if ( numeroAzar > numeroIngresado)
+            imprimir("Perdio "+nombre+", el numero pensado era mayor al numero ingresado: "+numeroAzar);
+        else 
+            imprimir("Perdio "+nombre+", el numero pensado era menor al numero ingresado: "+numeroAzar);
 
 
 
