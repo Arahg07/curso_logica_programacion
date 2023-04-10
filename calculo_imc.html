@@ -10,9 +10,18 @@
         var nombre;
         var peso;
         var altura;
+        var imc = 0;
+                
+        function calcularIMC(nombre, peso, altura){
+            imc = Math.round((peso/(altura*altura)))
+            document.write("El IMC perteneciente a "+nombre+" es de: "+ imc);
+            return imc;
+        }
 
         function calcularIMC(nombre, peso, altura){
-            document.write("El IMC perteneciente a "+nombre+" es de: "+ Math.round((peso/(altura*altura))));
+            imc = Math.round((peso/(altura*altura)))
+            document.write("El IMC perteneciente a "+nombre+" es de: "+ imc);
+            return imc;
         }
 
         function saltarLinea(saltos){
@@ -25,24 +34,26 @@
         peso = 70;
         altura = 1.60;      
 
-        calcularIMC(nombre,peso, altura);
+        var imcJ = calcularIMC(nombre,peso, altura);
         saltarLinea(2);
 
         nombre = "Mario";
         peso = 90;
         altura = 1.80;      
 
-        calcularIMC(nombre,peso, altura);
-        saltarLinea(5);
+        var imcM = calcularIMC(nombre,peso, altura);
+        saltarLinea(2);
+        
 
         nombre = "Raul";
         peso = 85;
         altura = 1.70;      
 
-        calcularIMC(nombre,peso, altura);
+        var imcR = calcularIMC(nombre,peso, altura);
+        saltarLinea(5);
         
-
-    
+        promedio = Math.round((imcJ+imcM+imcR)/3);
+        document.write("El promedio de las 3 personas es: "+promedio)
     </script>
      
 </html>
