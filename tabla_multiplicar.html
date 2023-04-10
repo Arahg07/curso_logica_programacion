@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+<html>
+    <head>
+      <title>Mundial Fifa</title>
+    </head>
+
+    <h2>Años del mundial</h2>
+
+    <script>
+
+        function imprimir(mensaje){
+            document.write(mensaje);
+            saltarLinea(1);
+        }
+
+        function saltarLinea(saltos){
+            for (var i = 1; i <= saltos; i++)
+                document.write("<br>");
+        }
+
+        function multiplicar(multiplicando, multiplicador){
+            var resultado = multiplicando * multiplicador;
+            return resultado;
+        }
+        
+        var i = 1;
+        var tabla = 5;
+
+        imprimir("While");
+        while ( i <= 10){
+            imprimir (tabla+" * "+i+" = "+ multiplicar(tabla,i));
+            i = i + 1;
+        }
+
+        saltarLinea(2);
+
+        imprimir("For");
+        for (i = 1; i <= 10; i++)
+        imprimir (tabla+" * "+i+" = "+ multiplicar(tabla,i));
+
+
+    </script>
+     
+</html>
