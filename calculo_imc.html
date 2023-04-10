@@ -7,10 +7,9 @@
     <h2>Programa Calcular IMC</h2>
 
     <script>
-        var nombre;
-        var peso;
-        var altura;
-        var imc = 0;
+        var nombre = prompt("Ingresa tu nombre: ");
+        var peso = prompt ("Ingresa tu peso: ");
+        var altura = prompt ("Ingresa tu altura: ");
                 
         function imprimir(mensaje){
             document.write(mensaje);
@@ -26,29 +25,9 @@
                 document.write("<br>");
         }
         
-        nombre = "Jorge";
-        peso = 70;
-        altura = 1.60;      
-        var imcJorge = calcularIMC(nombre,peso, altura);
-        imprimir("El IMC perteneciente a "+nombre+" es de: "+ imcJorge);
+        imprimir("El IMC perteneciente a "+nombre+" es de: "+ calcularIMC(nombre,peso, altura));
         saltarLinea(2);
 
-        nombre = "Mario";
-        peso = 90;
-        altura = 1.80;      
-        var imcMario = calcularIMC(nombre,peso, altura);
-        imprimir("El IMC perteneciente a "+nombre+" es de: "+ imcMario);
-        saltarLinea(2);
-        
-        nombre = "Raul";
-        peso = 85;
-        altura = 1.70;      
-        var imcRaul = calcularIMC(nombre,peso, altura);
-        imprimir("El IMC perteneciente a "+nombre+" es de: "+ imcRaul);
-        saltarLinea(2);
-        
-        promedio = Math.round((imcJorge+imcMario+imcRaul)/3);
-        document.write("El promedio de las 3 personas es: "+promedio)
     </script>
      
 </html>
