@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+<html>
+    <head>
+      <title>IMC</title>
+    </head>
+
+    <h2>Programa Calcular IMC</h2>
+
+    <script>
+        var nombre;
+        var peso;
+        var altura;
+
+        function calcularIMC(nombre, peso, altura){
+            document.write("El IMC perteneciente a "+nombre+" es de: "+ Math.round((peso/(altura*altura))));
+        }
+
+        function saltarLinea(saltos){
+            for (var i = 1; i <= saltos; i++)
+                document.write("<br>");
+        }
+
+        
+        nombre = "Jorge";
+        peso = 70;
+        altura = 1.60;      
+
+        calcularIMC(nombre,peso, altura);
+        saltarLinea(2);
+
+        nombre = "Mario";
+        peso = 90;
+        altura = 1.80;      
+
+        calcularIMC(nombre,peso, altura);
+        saltarLinea(5);
+
+        nombre = "Raul";
+        peso = 85;
+        altura = 1.70;      
+
+        calcularIMC(nombre,peso, altura);
+        
+
+    
+    </script>
+     
+</html>
