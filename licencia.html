@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<html>
+    <head>
+      <title>Licencia de conducir</title>
+    </head>
+
+    <h2>¿Tienes licencia de cinducir?</h2>
+
+    <script>
+        var nombre = prompt("Ingresa tu nombre: ");
+        var edad = parseInt(prompt ("Ingresa tu edad: "));
+        var respuesta = prompt("¿Ya cuentas con tu licencia, responde S para Si y N para no?: ");
+                
+        function imprimir(mensaje){
+            document.write(mensaje);
+            saltarLinea(1)
+        }
+
+        function saltarLinea(saltos){
+            for (var i = 1; i <= saltos; i++)
+                document.write("<br>");
+        }
+
+
+        if (respuesta == "S" && edad >=18)
+            imprimir("Felicidades "+nombre+", ya tienes licencia de conducir y edad para conducir");
+        else if (respuesta == "N" || edad < 18)
+            imprimir("Lo sentimos "+nombre+", aun no puedes conducir");
+
+
+    </script>
+     
+</html>
