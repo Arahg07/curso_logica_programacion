@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+<html>
+    <head>
+      <title>Inicio de sesion</title>
+    </head>
+
+    <h2>Inicio de sesión</h2>
+
+    <script>
+
+        function imprimir(mensaje){
+            document.write(mensaje);
+            saltarLinea(1);
+            
+        }
+
+        function saltarLinea(saltos){
+            for (var i = 1; i <= saltos; i++)
+                document.write("<br>");
+        }
+
+        var intentos = 3;
+        var password;
+        var usuario;
+
+        while(intentos > 0){
+            
+            usuario = prompt("Ingresa tu usuario");
+            password = prompt("Ingresa tu contraseña: ");
+
+            if(password == "alura321" && usuario == "alura"){
+                alert("Bienvenido al sistema "+ usuario);
+                imprimir("Bienvenido "+ usuario+ ", su sesión esta abierta.");
+                break;
+            }else{
+                alert("Error, usuario no identificado");
+                if(intentos == 1)
+                imprimir("Inicio de sesión denegada");
+            }
+
+            intentos --;            
+
+        }
+
+
+    </script>
+     
+</html>
