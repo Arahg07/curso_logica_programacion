@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+<html>
+    <head>
+      <title>Promedio de edades</title>
+    </head>
+
+    <h2>Promedio de Edades</h2>
+
+    <script>
+        var miembros = parseInt(prompt("Ingresa la cantidad de miembros de tu familia: "));
+        var sumaEdades = 0;
+        var edad;
+
+        function imprimir(mensaje){
+            document.write(mensaje);
+            saltarLinea(2);
+        }
+
+        function saltarLinea(saltos){
+            for (var i = 1; i <= saltos; i++)
+                document.write("<br>");
+        }
+
+        
+        for (var i = 1; i <= miembros; i++ ){
+            edad = parseInt(prompt("Ingresa la edad del miembro "+i+" : "))
+            sumaEdades = sumaEdades + edad;
+
+            imprimir("La edad del miembro "+i+" es :"+ edad)
+        }
+
+        var promedio = sumaEdades / miembros;
+        
+        imprimir("El promedio de las edades de la familia es de:"+Math.round(promedio));
+
+
+    </script>
+     
+</html>
