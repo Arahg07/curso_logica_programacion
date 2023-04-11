@@ -8,7 +8,7 @@
 
     <script>
         var nombre = prompt("Ingresa tu nombre: ");
-        var numeroIngresado = parseInt(prompt ("Ingresa un número del 1 al 10: "));
+        var numeroIngresado;
                 
         function imprimir(mensaje){
             document.write(mensaje);
@@ -26,13 +26,26 @@
 
         var numeroAzar = loteria(10);
 
-        if (numeroIngresado == numeroAzar)
-            imprimir("Felicidades "+nombre+", acerto al numero: "+numeroAzar);
-        else if ( numeroAzar > numeroIngresado)
-            imprimir("Perdio "+nombre+", el numero pensado era mayor al numero ingresado: "+numeroAzar);
-        else 
-            imprimir("Perdio "+nombre+", el numero pensado era menor al numero ingresado: "+numeroAzar);
+        var i = 1
 
+        while(i <=3){
+
+            numeroIngresado = parseInt(prompt ("Ingresa un número del 1 al 10: "));
+
+            if (numeroIngresado == numeroAzar)
+            {
+                alert("Felicidades "+nombre+", acerto al "+i+ " intento");
+                break;
+            }
+            else if ( numeroAzar > numeroIngresado)
+                alert("Perdio "+nombre+", el numero pensado es mayor al numero ingresado");
+            else 
+                alert("Perdio "+nombre+", el numero pensado es menor al numero ingresado");
+        
+            i++
+        }
+        
+        imprimir ("El numero pensado es: " + numeroAzar)
 
 
     </script>
