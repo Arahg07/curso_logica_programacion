@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+<html>
+    <head>
+      <title>Numeros Pares</title>
+    </head>
+
+    <h2>Imprimir numeros pares del 1 al 100</h2>
+
+    <script>
+
+        function imprimir(mensaje){
+            document.write(mensaje);
+            saltarLinea(2);
+        }
+
+        function saltarLinea(saltos){
+            for (var i = 1; i <= saltos; i++)
+                document.write("<br>");
+        }
+
+        var i = 1;
+        var division = 1;
+
+        while (i <= 100 ){
+            
+            division = i % 2;
+
+            if(division == 0)
+                imprimir(i+" es número par.")
+            i++;
+        }
+       
+        imprimir("Fin");
+
+
+    </script>
+     
+</html>
