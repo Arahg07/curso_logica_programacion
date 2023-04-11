@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<html>
+    <head>
+      <title>Estrellas</title>
+    </head>
+
+    <h2>¡Estrellas!</h2>
+
+    <script>
+
+        function imprimir(mensaje){
+            document.write(mensaje);
+            
+        }
+
+        function saltarLinea(saltos){
+            for (var i = 1; i <= saltos; i++)
+                document.write("<br>");
+        }
+
+       for(var i = 1; i<= 31; i++){
+            for(var x = 1; x<= 169; x++)
+                imprimir("*");
+            saltarLinea(1);     
+       }
+
+
+    </script>
+     
+</html>
