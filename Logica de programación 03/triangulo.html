@@ -1,0 +1,22 @@
+<canvas width="1350" height="609"></canvas>
+<script>
+    let pantalla = document.querySelector("canvas");
+    let pincel = pantalla.getContext("2d");
+
+    pincel.fillStyle = "black";
+    pincel.beginPath();
+    pincel.moveTo(200,50);
+    pincel.lineTo(200,600);
+    pincel.lineTo(800,600);
+    pincel.fill();
+
+
+    pincel.fillStyle = "red";
+    pincel.beginPath();
+    pincel.moveTo(250,150);
+    pincel.lineTo(250,550);
+    pincel.lineTo(700,550);
+    pincel.fill();
+
+
+</script>
