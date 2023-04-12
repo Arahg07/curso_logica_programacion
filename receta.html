@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+<html>
+    <head>
+      <title>Receta armando</title>
+    </head>
+
+    <h2>¡No hay ingredientes repetidos!</h2>
+
+    <script>
+        var ingredientes = [];
+        var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+        var contador = 1;
+
+        function imprimir(mensaje){
+            document.write(mensaje);
+            
+        }
+
+        function saltarLinea(saltos){
+            for (var i = 1; i <= saltos; i++)
+                document.write("<br>");
+        }
+
+        while( contador <= cantidad) {
+            var verificar = false;
+            var ingrediente = prompt("Informe el ingrediente " + contador);
+            
+            for(var i = 0; i< ingredientes.length; i++){
+                if(ingredientes[i] == ingrediente){
+                    alert("Este ingrediente ya esta repetido, prueba con otro");
+                    verificar = true;
+                    break;
+                }
+            }
+            if(verificar == false){
+                ingredientes.push(ingrediente);
+                console.log(ingredientes);
+                contador++;
+            }            
+        }
+
+        for(var i = 0; i < ingredientes.length; i++){
+
+            imprimir("El ingrediente "+(i+1)+" es: "+ingredientes[i]);
+            saltarLinea(2);
+            
+        }
+
+        
+    </script>
+</html>
