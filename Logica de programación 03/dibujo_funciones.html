@@ -13,26 +13,17 @@
 
     }
 
-    let posicionX = 0;
-    let posicionY = 0;
-    for(let i = 0; i<= 30; i++){
-        dibujarCuadrado(posicionX,posicionY, "yellow");
-        posicionX = posicionX + 50;
+    function generarPosicion(x,y, color){
+        for(let i = 0; i<= 30; i++){
+            dibujarCuadrado(x,y,color);
+            x = x + 50;
     }
 
-    posicionX = 0;
-    posicionY = 50;
-    for(let i = 0; i<= 30; i++){
-        dibujarCuadrado(posicionX,posicionY, "red");
-        posicionX = posicionX + 50;
     }
 
-    posicionX = 0;
-    posicionY = 100;
-    for(let i = 0; i<= 30; i++){
-        dibujarCuadrado(posicionX,posicionY, "green");
-        posicionX = posicionX + 50;
-    }
+    generarPosicion(0,0,"yellow");
+    generarPosicion(0,50,"red");
+    generarPosicion(0,100,"green");
     
 
 </script>
