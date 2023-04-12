@@ -17,16 +17,26 @@
     }
 
     let i = 0;
+    let x = 0;
 
     function actualizarPantalla(){
         limpiarPantalla();
+        if(x == 0){
         crearCirculo(i,20,10)
-        i++
+        i++;
+        if(i == 600)
+            x = 600;
+        }
+        if(x == 600){
+        crearCirculo(i,20,10)
+        i--;
+        if(i == 0)
+            x = 0;
+        }
+
     }
 
     setInterval(actualizarPantalla, 5);
-    
-    
 
 
 </script>
