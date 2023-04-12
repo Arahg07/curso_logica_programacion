@@ -6,13 +6,18 @@
 
     pincel.fillStyle = "gray";
     pincel.fillRect(100,100,600,400);   
-        
 
-    function mostrarEvento(evento) {
-        console.log(evento);
-        alert("usted hizo clic")
+    function dibujarCirculo(evento) {
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+        
+        pincel.fillStyle = "blue";
+        pincel.beginPath();
+        pincel.arc(x,y,10,0,2*3.14);
+        pincel.fill();
+        console.log(x+" , "+y);
     }
 
-    pantalla.onclick = mostrarEvento;
+    pantalla.onclick = dibujarCirculo;
 
 </script>
